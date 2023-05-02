@@ -227,8 +227,7 @@ public:
     void afisare_ls_apl();
 };
 
-void del(Aplicatie_gratis* ap){ delete ap;}
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 int main()
 {
     Utilizator util1("Utilizator_test","parola","Popescu Ion",12345678,123,5000,1,2001,"voucher1",25,18,2023); //creare cont implicit
@@ -253,7 +252,7 @@ int main()
     return 0;
 }
 
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 void IntVector::add_elem(int x) //adauga un elem la vector
     {
         int i; Size++;
@@ -343,7 +342,6 @@ void Portofel::adaugare_metoda()
     string alegere;
     cout<<"Ce metoda de plata doriti sa adaugati? (card/voucher)\n";
     cin>>alegere;
-    //AICI EXC!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
     if(alegere=="card")
     {
         cin>>card1;
