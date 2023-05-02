@@ -15,3 +15,23 @@
 ## Functionalitati:
 
 La momentul actual, aplicatia poate memora o lista de aplicatii mobile, poate crea un cont de utilizator si adauga o metoda de plata la acesta, precum si bani in cont. Exista un abonament la pretul caruia se aplica o reducere la cumpararea unui pachet cu durata mai lunga. Exista aplicatii gratis si platite. Abonamentul aplica o reducere la pretul aplicatiilor platite. Cumpararea unei aplicatii sau al unui abonament verifica soldul contului de utilizator si il modifica corespunzator. Utilizatorul poate verifica informatii despre o aplicatie si o poate adauga la contul sau.
+
+## Schimbari Etapa 2:
+
+## Clase:
+
+- String : vechea clasa String a fost inlocuita cu cea din biblioteca standard;
+- Au fost adaugate doua ierarhii de mostenire, cu bazele metoda_plata si Aplicatie_gratis;
+- metoda_plata : clasa de baza abstracta, ce contine soldul unei metode de plata, un getter si un setter pentru acesta, si o functie pur virtuala pentru afisarea informatiilor despre o metoda de plata;
+- voucher : mosteneste metoda_plata, ce adauga un nume de voucher si o data de expirare, si implementeaza functia de afisare din baza;
+- card : mosteneste voucher, anterior numita date_card. Adauga CVC si numarul cardului;
+- Portofel : se permite acum adaugarea unui card si a unui voucher;
+- Aplicatie_gratis : anterior numita Aplicatie, retine date despre o aplicatie mobila cu exceptia pretului. Contine metode virtuale de gestiune a pretului si a discountului pentru a permite declararea de pointeri de tip Aplicatie_gratis la obiecte de tip derivat si un destructor virtual;
+- Aplicatie_cu_plata_initiala : mosteneste Aplicatie_gratis, adauga pret si discount (pentru conturi cu abonament la magazin);
+- Aplicatie_cu_abonament : mosteneste Aplicatie_gratis, reprezinta o aplicatie care se poate instala gratuit dar contine un abonament in interiorul acesteia. Adauga un pret pe luna de abonament si discount (pentru conturi cu abonament la magazin);
+- Aplicatie_abon_si_init : mosteneste Aplicatie_cu_plata_initiala si Aplicatie_cu_abonament si reprezinta o aplicatie care necesita plata la instalare si contine un abonament in interiorul acesteia;
+- Cele trei clase derivate din Aplicatie_gratis contin metode de calcul a pretului si de afisare a informatiilor despre aplicatie;
+
+## Functionalitati:
+
+Un utilizator poate acum sa foloseasca un card si un voucher. Introducerea unui alt card/voucher inlocuieste datele cardul/voucherul anterior cu cel nou. Cand se adauga bani in portofel, se poate selecta un card sau un voucher. Folosirea unui voucher consuma toti banii de pe acesta, in timp ce cardul poate dona doar o parte din soldul sau. Inainte de plata unui abonament sau a unei aplicatii, se afiseaza suma finala pe ecran. Daca suma finala depaseste soldul din portofel, tranzactia va fi anulata si se va afisa un mesaj corespunzator pe ecran.
