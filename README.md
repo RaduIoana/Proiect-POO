@@ -35,3 +35,15 @@ La momentul actual, aplicatia poate memora o lista de aplicatii mobile, poate cr
 ## Functionalitati:
 
 Un utilizator poate acum sa foloseasca un card si un voucher. Introducerea unui alt card/voucher inlocuieste datele cardul/voucherul anterior cu cel nou. Cand se adauga bani in portofel, se poate selecta un card sau un voucher. Folosirea unui voucher consuma toti banii de pe acesta, in timp ce cardul poate dona doar o parte din soldul sau. Inainte de plata unui abonament sau a unei aplicatii, se afiseaza suma finala pe ecran. Daca suma finala depaseste soldul din portofel, tranzactia va fi anulata si se va afisa un mesaj corespunzator pe ecran.
+
+## Schimbari Etapa 3:
+
+- Utilizatorul poate acum sa adauge oricate metode de plata doreste. Acestea pot fi de tip card sau voucher.
+- La adaugarea de bani in portofel dintr-o metoda de plata, selectarea metodei dorite se face prin indiciele acesteia (ordinea in care se afiseaza pe ecran, incepand de la 0)
+- Functie template pentru eliberarea memoriei unui vector
+- Const correctness
+- Functia de creare cont este acum independenta de clasa Utilizator si returneaza un unique_ptr
+- Contul de utilizator este acum unique_ptr
+- Aplicatiile din magazin sunt stocate ca pointeri const de tip clasa de baza
+- Atunci cand o operatie modifica un vector din program, se apeleaza functia sort din <algorithm>
+- Acum se pot dezinstala aplicatii din cont
