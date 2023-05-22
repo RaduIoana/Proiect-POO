@@ -1,0 +1,9 @@
+# depslib dependency file v1.0
+1684584739 source:c:\users\ioana alexandra\desktop\scoala\sem 2\poo\etapa 3\main.cpp
+	<iostream>
+	<string.h>
+	<vector>
+	<typeinfo>
+	<algorithm>
+	<memory>
+
